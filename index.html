@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Debugscript</title>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="debug-output"></div>
+        <button onclick="toggleDebugging()">Toggle Debugging</button>
+        <label><input type="checkbox" name="debug-filter" value="error" checked>Errors</label>
+        <label><input type="checkbox" name="debug-filter" value="warning" checked>Warnings</label>
+        <label><input type="checkbox" name="debug-filter" value="info" checked>Info</label>
+
+        <button onclick="clearDebugMessages()">Clear</button>
+        <a id="download-link" download>
+            <button onclick="saveDebugLog()">Save Log</button>
+        </a>
+        <input id="search-input" type="text" onkeyup="searchDebugMessages()">
+    </body>
+</html>
